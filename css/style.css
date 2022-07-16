@@ -1,0 +1,8 @@
+/* JS에서 쓰이는 class */
+.hidden {
+  display: none;
+}
+
+body {
+  text-align: center;
+}
