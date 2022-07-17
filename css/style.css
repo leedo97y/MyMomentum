@@ -18,6 +18,10 @@ input::placeholder {
   font-family: "Montserrat", sans-serif;
 }
 
+input:focus {
+  outline: none;
+}
+
 /* login form */
 header {
   position: fixed;
@@ -75,7 +79,7 @@ header {
 #todo-input {
   width: 350px;
   height: 20px;
-  padding: 7px 15px;
+  padding: 7px 10px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #dfe1e6;
