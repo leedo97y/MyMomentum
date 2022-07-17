@@ -4,7 +4,7 @@ const title = document.querySelector("title");
 
 const greetings = document.querySelector("#greetings");
 
-title.innerText = `My page`;
+title.innerText = "My page";
 
 const USERID = "userId";
 
