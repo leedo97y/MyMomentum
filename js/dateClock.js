@@ -33,11 +33,20 @@ function date() {
 function clock() {
   const today = new Date();
 
-  const hours = JSON.stringify(today.getHours()).padStart(2, "0");
+  const timeNum = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+    12,
+  ];
+
+  const hours = JSON.stringify(timeNum[today.getHours()]).padStart(2, "0");
   const minutes = JSON.stringify(today.getMinutes()).padStart(2, "0");
   const seconds = JSON.stringify(today.getSeconds()).padStart(2, "0");
 
-  clockPart.innerText = `${hours}:${minutes}:${seconds}`;
+  if (today.getHours() < 12) {
+    clockPart.innerText = `${hours} ${minutes} ${seconds} am`;
+  } else if (today.getHours() >= 12) {
+    clockPart.innerText = `${hours}:${minutes}:${seconds} pm`;
+  }
 }
 
 date();
