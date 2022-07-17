@@ -43,9 +43,9 @@ function clock() {
   //const seconds = JSON.stringify(today.getSeconds()).padStart(2, "0");
 
   if (today.getHours() < 12) {
-    clockPart.innerText = `${hours} : ${minutes} am`;
+    clockPart.innerText = `${hours} : ${minutes} AM`;
   } else if (today.getHours() >= 12) {
-    clockPart.innerText = `${hours} : ${minutes} pm`;
+    clockPart.innerText = `${hours} : ${minutes} PM`;
   }
 }
 
