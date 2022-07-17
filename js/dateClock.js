@@ -34,8 +34,8 @@ function clock() {
   const today = new Date();
 
   const timeNum = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-    12,
+    12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11,
   ];
 
   const hours = JSON.stringify(timeNum[today.getHours()]).padStart(2, "0");
