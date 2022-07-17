@@ -61,3 +61,17 @@ if (savedTodo !== null) {
   // 이렇게 해줘야 todoList 부분에 저장된 todo가 보인다.
   parsedTodo.forEach(makeTodoText);
 }
+
+// 포커스 얻으면 placeholder 숨기기
+const focus = "focus";
+
+function handleFocusIn() {
+  todoInput.placeholder = "";
+}
+
+function handleFocusOut() {
+  todoInput.placeholder = "Write your To-Do";
+}
+
+todoInput.addEventListener("focusin", handleFocusIn);
+todoInput.addEventListener("focusout", handleFocusOut);
