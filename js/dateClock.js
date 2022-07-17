@@ -40,12 +40,12 @@ function clock() {
 
   const hours = JSON.stringify(timeNum[today.getHours()]).padStart(2, "0");
   const minutes = JSON.stringify(today.getMinutes()).padStart(2, "0");
-  const seconds = JSON.stringify(today.getSeconds()).padStart(2, "0");
+  //const seconds = JSON.stringify(today.getSeconds()).padStart(2, "0");
 
   if (today.getHours() < 12) {
-    clockPart.innerText = `${hours} ${minutes} ${seconds} am`;
+    clockPart.innerText = `${hours} : ${minutes} am`;
   } else if (today.getHours() >= 12) {
-    clockPart.innerText = `${hours}:${minutes}:${seconds} pm`;
+    clockPart.innerText = `${hours} : ${minutes} pm`;
   }
 }
 
