@@ -36,3 +36,14 @@ if (savedUserId === null) {
   greetingText();
 }
 // 이렇게 하고 새로고침하면... 다시 form이 생성되기 때문에 애초에 login-form에 class="hidden"을 부여한다.
+
+function loginFocus() {
+  loginInput.placeholder = "";
+}
+
+function loginFocusOut() {
+  loginInput.placeholder = "Enter your name!";
+}
+
+loginInput.addEventListener("focusin", loginFocus);
+loginInput.addEventListener("focusout", loginFocusOut);
