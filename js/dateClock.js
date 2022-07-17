@@ -26,7 +26,7 @@ function date() {
   const date = JSON.stringify(today.getDate()).padStart(2, "0");
   const day = dayText[today.getDay()];
 
-  datePart.innerText = `${year} ${month}/${date} ${day}`;
+  datePart.innerText = `${year} ${month} ${date} ${day}`;
 }
 
 // clock part

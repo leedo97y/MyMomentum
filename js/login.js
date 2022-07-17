@@ -10,7 +10,7 @@ function onLoginSubmit(event) {
   event.preventDefault();
 
   const userId = loginInput.value;
-  title.innerText = `${userId}'s page`;
+
   localStorage.setItem(USERID, userId);
   loginForm.classList.add("hidden");
 
@@ -36,6 +36,9 @@ if (savedUserId === null) {
   greetingText();
 }
 // 이렇게 하고 새로고침하면... 다시 form이 생성되기 때문에 애초에 login-form에 class="hidden"을 부여한다.
+
+title.innerText = `${savedUserId}'s page`;
+// 페이지 이름 바꾸기
 
 function loginFocus() {
   loginInput.placeholder = "";

@@ -8,15 +8,18 @@
     <title>my page</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        type="text"
-        maxlength="15"
-        placeholder="Enter your name!"
-      />
-      <input type="submit" value="login" />
-    </form>
+    <header>
+      <form id="login-form" class="hidden">
+        <input
+          required
+          type="text"
+          maxlength="15"
+          placeholder="Enter your name!"
+        />
+        <input type="submit" value="login" />
+      </form>
+    </header>
+
     <h2 id="date">0000 00/00 fri</h2>
     <h2 id="clock">00:00:00</h2>
     <h1 id="greetings" class="hidden">hello</h1>
@@ -29,11 +32,14 @@
       />
     </form>
     <ul id="todo-list"></ul>
-    <div>
-      <span id="weather"></span>
-      <span id="city"></span>
-      <div id="icon"></div>
-    </div>
+    <footer>
+      <div class="weather-container">
+        <div id="icon"></div>
+        <span id="weather"></span>
+        <span id="city"></span>
+      </div>
+    </footer>
+
     <script src="js/login.js"></script>
     <script src="js/todolist.js"></script>
     <script src="js/dateClock.js"></script>
