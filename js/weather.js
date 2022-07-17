@@ -13,9 +13,9 @@ function getGeo(position) {
     .then((response) => response.json())
     .then((data) => {
       const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-      weather.innerText = `${data.weather[0].main} / ${parseInt(
+      weather.innerText = `${data.weather[0].main}  ${parseInt(
         data.main.temp
-      )}`;
+      )}°`;
       city.innerText = `${data.name}`;
       icon.innerHTML = `<img src=${iconUrl} />`;
     });
