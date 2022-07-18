@@ -24,17 +24,53 @@ input:focus {
 
 header {
   position: fixed;
-  top: 20px;
+  top: 10px;
   width: 100%;
 }
 
 /* search form */
-/* #search-form {
-  width: 220px;
+#search-form {
+  width: 500px;
   height: 25px;
-} */
+  float: left;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.search span {
+  margin-right: 5px;
+}
+
+.search input {
+  width: 200px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 3px 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.search button {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+}
 
 /* login form */
+#login-form {
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
 #login-form input:first-child {
   width: 180px;
   height: 20px;
@@ -46,10 +82,11 @@ header {
   background-color: transparent;
   color: white;
   padding: 5px 7px 5px 9px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #login-form input:last-child {
-  width: 50px;
+  width: 55px;
   height: 33px;
   color: #dfe1e6;
   background-color: transparent;
@@ -58,6 +95,7 @@ header {
   padding: 5px 3px 1px 3px;
   cursor: grab;
   letter-spacing: 1.2px;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Clock */
@@ -95,12 +133,14 @@ header {
   border: none;
   border-bottom: 1px solid #dfe1e6;
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 li {
   list-style-type: none;
   margin-bottom: 5px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 li span {

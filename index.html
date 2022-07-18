@@ -9,8 +9,9 @@
   </head>
   <body>
     <header>
-      <!-- <form
+      <form
         id="search-form"
+        class="search"
         action="https://www.google.com/search"
         method="get"
       >
@@ -18,9 +19,13 @@
         <input
           type="text"
           name="search"
-          placeholder="Write here and press Enter "
+          maxlength="200"
+          value=""
+          autocomplete="off"
         />
-      </form> -->
+        <button name="click" value="" type="submit">Go</button>
+      </form>
+
       <form id="login-form" class="hidden">
         <input
           required
