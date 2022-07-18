@@ -39,18 +39,19 @@ header {
 }
 
 .search span {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .search input {
-  width: 200px;
+  width: 245px;
   height: 20px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
   color: white;
-  padding: 3px 5px;
+  padding: 2px 3px 5px 9px;
   font-family: "Montserrat", sans-serif;
+  margin-right: 3px;
 }
 
 .search button {
