@@ -6,6 +6,9 @@ function handleSearchButton(event) {
   event.preventDefault();
   // 1. get input value
   // 2. search for it
+  let searchValue = searchInput.value;
+
+  location.href = "https://www.google.co.kr/search?q=" + searchValue;
 }
 
-searchButton.addEventListener("submit", handleSearchButton);
+searchForm.addEventListener("submit", handleSearchButton);
