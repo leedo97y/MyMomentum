@@ -8,7 +8,9 @@
     <title>my page</title>
   </head>
   <body>
+    <!-- header : search part, login part -->
     <header>
+      <!-- search -->
       <form id="search-form" class="search">
         <span>Search</span>
         <input
@@ -21,7 +23,7 @@
         />
         <button name="click" value="" type="submit">Go</button>
       </form>
-
+      <!-- login -->
       <form id="login-form" class="hidden">
         <input
           required
@@ -32,10 +34,12 @@
         <input type="submit" value="login" />
       </form>
     </header>
-
+    <!-- date, clock part -->
     <h2 id="date">0000 00/00 fri</h2>
     <h2 id="clock">00:00:00</h2>
+    <!-- greeting part -->
     <h1 id="greetings" class="hidden">hello</h1>
+    <!-- todo form part -->
     <form id="todo-form">
       <input
         required
@@ -45,6 +49,7 @@
       />
     </form>
     <ul id="todo-list"></ul>
+    <!-- footer : weather -->
     <footer>
       <div class="weather-container">
         <div id="icon"></div>
@@ -53,11 +58,13 @@
       </div>
     </footer>
 
+    <!-- script part -->
     <script src="js/login.js"></script>
     <script src="js/todolist.js"></script>
     <script src="js/dateClock.js"></script>
     <script src="js/background.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/bookmark.js"></script>
   </body>
 </html>
