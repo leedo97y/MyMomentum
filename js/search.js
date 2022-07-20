@@ -12,3 +12,14 @@ function handleSearchButton(event) {
 }
 
 searchForm.addEventListener("submit", handleSearchButton);
+
+function handleFocusIn() {
+  searchInput.placeholder = "";
+}
+
+function handleFocusOut() {
+  searchInput.placeholder = "Search in google";
+}
+
+searchInput.addEventListener("focusin", handleFocusIn);
+searchInput.addEventListener("focusout", handleFocusOut);
