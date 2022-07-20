@@ -23,20 +23,43 @@
         />
         <button name="click" value="" type="submit">Go</button>
       </form>
-      <!-- login -->
-      <form id="login-form" class="hidden">
-        <input
-          required
-          type="text"
-          maxlength="15"
-          placeholder="Enter your name!"
-        />
-        <input type="submit" value="login" />
-      </form>
+      <!-- bookmark -->
+      <div id="bookmark-title">
+        <button id="bookmark-button">Bookmark</button>
+      </div>
+      <div id="bookmark-body" class="hidden">
+        <button id="cancel-button">X</button>
+        <form id="bookmark-form">
+          <input type="text" placeholder="Bookmark name" />
+          <input required type="url" placeholder="Add URL" />
+        </form>
+        <ul id="bookmark-list">
+          <li>
+            <a href="#"><span id="bookmark-name">gsgs</span></a>
+            <button id="delete-button">X</button>
+          </li>
+          <li>
+            <a href="#"><span id="bookmark-name">sfafgag</span></a>
+          </li>
+          <li>
+            <a href="#"><span id="bookmark-name">afagfsgsgcb</span></a>
+          </li>
+        </ul>
+      </div>
     </header>
     <!-- date, clock part -->
     <h2 id="date">0000 00/00 fri</h2>
     <h2 id="clock">00:00:00</h2>
+    <!-- login -->
+    <form id="login-form" class="hidden">
+      <input
+        required
+        type="text"
+        maxlength="15"
+        placeholder="Enter your name!"
+      />
+      <input type="submit" value="login" />
+    </form>
     <!-- greeting part -->
     <h1 id="greetings" class="hidden">hello</h1>
     <!-- todo form part -->
