@@ -132,8 +132,8 @@ header {
 }
 
 #bookmark-form input:last-child {
-  float: left;
-  margin-left: 10px;
+  float: right;
+  margin-right: 10px;
   margin-bottom: 5px;
   color: #fff;
   background-color: transparent;
