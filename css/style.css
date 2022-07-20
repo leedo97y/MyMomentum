@@ -118,10 +118,10 @@ header {
   border-bottom: 1px solid #dfe1e6;
 }
 
-#bookmark-form input:last-child {
+#url {
   width: 190px;
   height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 5px;
   padding-bottom: 3px;
   font-family: "Montserrat", sans-serif;
@@ -131,7 +131,19 @@ header {
   border-bottom: 1px solid #dfe1e6;
 }
 
+#bookmark-form input:last-child {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: grab;
+}
+
 #bookmark-list {
+  margin-top: 30px;
   padding-left: 15px;
   color: #fff;
 }
