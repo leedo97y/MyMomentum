@@ -44,5 +44,5 @@ function handleBookmarkSubmit(event) {
   span.innerText = name;
 }
 // 오류는 없는데 작동이 안됨, localStorage에 넣어야 하나? 그럼 구현 어떻게 해야하지
-
+// 원인이 뭘까
 bookmarkForm.addEventListener("submit", handleBookmarkSubmit);
