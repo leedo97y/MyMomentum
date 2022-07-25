@@ -97,6 +97,7 @@ header {
   color: #fff;
   background-color: transparent;
   border: none;
+  cursor: grab;
 }
 
 #bookmark-form {
