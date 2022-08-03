@@ -24,25 +24,66 @@ const bookmarkName = document.querySelector("#bookmark-form input:first-child");
 const bookmarkUrl = document.querySelector("#bookmark-form input:last-child");
 const bookmarkList = document.querySelector("#bookmark-list");
 
+let bookmarks = [];
+
+function saveBookmarks() {
+  localStorage.setItem("bookmark", JSON.stringify(bookmarks));
+}
+
 function handleBookmarkSubmit(event) {
   event.preventDefault();
 
+  const name = bookmarkName.value;
+  const url = bookmarkUrl.value;
+  bookmarkName.value = "";
+  bookmarkUrl.value = "";
+
+  const bookmarkObj = {
+    text: name,
+    url: url,
+    id: Date.now(),
+  };
+
+  bookmarks.push(bookmarkObj);
+  handleBookmarkText(bookmarkObj);
+  saveBookmarks();
+}
+
+function handleBookmarkText(bookmark) {
   const li = document.createElement("li");
+  li.id = bookmark.id;
   const aTag = document.createElement("a");
+  aTag.href = bookmark.url;
   const span = document.createElement("span");
+  span.innerText = bookmark.text;
   const deleteButton = document.createElement("button");
+  deleteButton.innerText = "X";
+  deleteButton.addEventListener("click", handleDeleteBookmark);
 
   aTag.appendChild(span);
   li.appendChild(aTag);
   li.appendChild(deleteButton);
   bookmarkList.appendChild(li);
-
-  const name = bookmarkName.value;
-  const url = bookmarkUrl.value;
-
-  aTag.href = url;
-  span.innerText = name;
 }
-// 오류는 없는데 작동이 안됨, localStorage에 넣어야 하나? 그럼 구현 어떻게 해야하지
-// 원인이 뭘까
+
+function handleDeleteBookmark(event) {
+  const liParent = event.target.parentElement;
+  liParent.remove();
+
+  bookmarks.filter((bookmark) => {
+    bookmark.id !== parseInt(liParent.id);
+  });
+
+  saveBookmarks();
+}
+
 bookmarkForm.addEventListener("submit", handleBookmarkSubmit);
+
+const savedBookmark = localStorage.getItem("bookmark");
+if (savedBookmark !== null) {
+  const parsedBookmark = JSON.parse(savedBookmark);
+  bookmarks = parsedBookmark;
+  parsedBookmark.forEach(handleBookmarkText);
+}
+
+// 추가랑 삭제는 되는데 왜 열리질 않지..?
