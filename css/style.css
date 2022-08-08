@@ -271,3 +271,9 @@ img {
 
   display: inline-block;
 }
+
+/* music */
+#music {
+  float: right;
+  margin-right: 30px;
+}
