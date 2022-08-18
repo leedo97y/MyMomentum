@@ -1,5 +1,5 @@
 const musicPlay = document.querySelector("audio");
-const musicSource = document.querySelector("#music-source");
+const musicName = document.querySelector("#music-name");
 
 const musicArr = [
   "/audio/Glimpsing Infinity - Asher Fulero.mp3",
@@ -11,10 +11,10 @@ const musicArr = [
   "/audio/The Thought of You - TrackTribe.mp3",
   "/audio/In Memory of Jean Talon - Mini Vandals.mp3",
   "/audio/Stairway - Patrick Patrikios.mp3",
-  "/audio/Trickling Up - Godmode.mp3",
 ];
 
 const randomMusicSrc = musicArr[Math.floor(Math.random() * musicArr.length)];
 const myAudio = new Audio();
-musicPlay.attributes[1].nodeValue = randomMusicSrc;
+musicPlay.attributes[1].value = randomMusicSrc;
 myAudio.src = randomMusicSrc;
+musicName.innerText = randomMusicSrc.slice(7, -4);
