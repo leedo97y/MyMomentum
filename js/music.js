@@ -15,7 +15,7 @@ const musicArr = [
 
 const randomMusicSrc = musicArr[Math.floor(Math.random() * musicArr.length)];
 const myAudio = new Audio();
-console.log(musicPlay.attributes);
+
 musicPlay.attributes[1].value = randomMusicSrc;
 myAudio.src = randomMusicSrc;
 musicName.innerText = randomMusicSrc.slice(6, -4);
