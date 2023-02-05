@@ -13,17 +13,20 @@ if (hours < 5 || hours >= 19) {
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.15)
     ),url("img/${randomBg3}")`;
+  body.style.backgroundSize = "cover";
 } else if (hours < 19 && hours >= 15) {
   const randomBg2 =
     sunsetImages[Math.floor(Math.random() * sunsetImages.length)];
   body.style.backgroundImage = `linear-gradient(
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.15)
-    ),url("/img/${randomBg2}")`;
+    ),url("img/${randomBg2}")`;
+  body.style.backgroundSize = "cover";
 } else if (hours < 15 && hours >= 5) {
   const randomBg1 = sunnyImages[Math.floor(Math.random() * sunnyImages.length)];
   body.style.backgroundImage = `linear-gradient(
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.15)
     ),url("img/${randomBg1}")`;
+  body.style.backgroundSize = "cover";
 }
