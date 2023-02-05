@@ -19,7 +19,7 @@ if (hours < 5 || hours >= 19) {
   body.style.backgroundImage = `linear-gradient(
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.15)
-    ),url("img/${randomBg2}")`;
+    ),url("/img/${randomBg2}")`;
 } else if (hours < 15 && hours >= 5) {
   const randomBg1 = sunnyImages[Math.floor(Math.random() * sunnyImages.length)];
   body.style.backgroundImage = `linear-gradient(
